@@ -6,14 +6,14 @@ library.add(fas, fab);
 
 const Intro = () => {
     return (
-        <header className=" space-y-7" id="intro">
-            <h3 className="ml-1 font-normal text-primary-green">
+        <header className="" id="intro">
+            <h3 className="ml-1 font-normal mb-2 text-primary-green">
                 &#8213; Ahmad Jafarov
             </h3>
-            <h1 className="text-8xl tracking-wide font-bold">
-                Hi, I&apos;m Ahmad
+            <h1 className="text-8xl tracking-wide mb-5 font-bold">
+                Hi, I&apos;m Ahmad 
             </h1>
-            <h2 className="text-6xl tracking-tight text-primary-green font-medium">
+            <h2 className="text-6xl tracking-tight mb-10 text-primary-green font-medium">
                 Software Engineer
             </h2>
 
