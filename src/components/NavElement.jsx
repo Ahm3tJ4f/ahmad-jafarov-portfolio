@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 const NavElement = ({ isScrolled, activeSection, sectionId }) => {
-    
     // Capitalize first letter
     const sectionName = sectionId.charAt(0).toUpperCase() + sectionId.slice(1);
-
     return (
         <li className={`list-none w-full`}>
             <a

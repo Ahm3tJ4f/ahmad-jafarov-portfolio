@@ -2,19 +2,18 @@ import { useState, useEffect, useRef } from "react";
 import "./assets/fonts.css";
 import "./App.css";
 import NavElement from "./components/NavElement";
-import Contents from "./components/Contents";
+import Sections from "./components/Sections";
 
 const App = () => {
     const sectionRefs = useRef([]);
     const sectionIds = ["intro", "about", "projects", "contact"];
-    const [activeSection, setActiveSection] = useState("");
+    const [activeSection, setActiveSection] = useState(sectionIds[0]);
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         sectionRefs.current = sectionIds.map((sectionId) =>
             document.getElementById(sectionId)
         );
-
         const handleScroll = () => {
             setIsScrolled(
                 window.scrollY > (sectionRefs.current[0]?.offsetTop || 0) - 100
@@ -38,7 +37,7 @@ const App = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [sectionIds]);
+    }, []);
 
     const navElements = sectionIds.map((id) => (
         <NavElement
@@ -55,12 +54,12 @@ const App = () => {
                 <ul
                     className={` ${
                         isScrolled ? "w-full" : "w-32"
-                    } flex flex-col transition-all duration-200 space-y-6`}
+                    } flex flex-col transition-all duration-200 space-y-7`}
                 >
                     {navElements}
                 </ul>
             </nav>
-            <Contents sectionIds={sectionIds} />
+            <Sections sectionIds={sectionIds} />
         </div>
     );
 };
