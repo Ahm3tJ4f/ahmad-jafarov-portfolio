@@ -39,15 +39,6 @@ const App = () => {
         };
     }, []);
 
-    const navElements = sectionIds.map((id) => (
-        <NavElement
-            isScrolled={isScrolled}
-            activeSection={activeSection}
-            sectionId={id}
-            key={id}
-        />
-    ));
-
     return (
         <div className="w-[70rem] mx-auto mt-52 flex space-x-20 ">
             <nav className="w-60 flex justify-end sticky top-12 h-[50vh]">
@@ -56,7 +47,14 @@ const App = () => {
                         isScrolled ? "w-full" : "w-32"
                     } flex flex-col transition-all duration-200 space-y-7`}
                 >
-                    {navElements}
+                    {sectionIds.map((id) => (
+                        <NavElement
+                            isScrolled={isScrolled}
+                            activeSection={activeSection}
+                            sectionId={id}
+                            key={id}
+                        />
+                    ))}
                 </ul>
             </nav>
             <Sections sectionIds={sectionIds} />

@@ -6,6 +6,9 @@ html {
       scroll-behavior: smooth;
 }
 
+.bg-thumbnail {
+ background: linear-gradient(0deg, rgb(34, 35, 38) 10%, rgba(33, 34, 37, 0.89) 42%, rgba(34, 35, 38, 0) 156%), url("./assets/image 1.png") center top / cover;
+}
 
 body {
     background-color: #181a1b;

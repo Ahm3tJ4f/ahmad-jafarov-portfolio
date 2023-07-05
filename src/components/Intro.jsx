@@ -10,7 +10,8 @@ const Intro = () => {
         <section id="intro" className="space-y-10">
             <header className="space-y-4">
                 <h3 className="text-xl font-medium tracking-wide pb-2">
-                    <span className="text-primary-green">&#8213;</span> Ahmad Jafarov
+                    <span className="text-primary-green">&#8213;</span> Ahmad
+                    Jafarov
                 </h3>
                 <h1 className="text-8xl tracking-wide mb-5 font-bold">
                     Hi, I&apos;m Ahmad
@@ -31,7 +32,11 @@ const Intro = () => {
                     icon={["fab", "github"]}
                     label="GitHub"
                 />
-                <Social href="" icon={["fas", "file"]} label="Resume" />
+                <Social
+                    href="https://drive.google.com/file/d/13TpVBXasG0LYkG24xMxhieqe3tMv3tgs"
+                    icon={["fas", "file"]}
+                    label="Resume"
+                />
             </div>
         </section>
     );
