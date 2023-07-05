@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+      scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #181a1b;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.glass-bg {
+    background: linear-gradient(
+        166deg,
+        rgba(114, 114, 114, 0.3) 60%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    transition: background 0.15s linear;
+    backdrop-filter: blur(2px);
+
+}
+
+.glass-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: .75rem;
+    padding: 0.5px;
+    background: linear-gradient(
+        166deg,
+        rgba(114, 114, 114, 0.6) 10%,
+        rgba(255, 255, 255, 0.0002) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
