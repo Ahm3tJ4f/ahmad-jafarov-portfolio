@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -12,10 +13,10 @@ const Project = ({ projectName, techs, github, demo, description, imgURL }) => {
     };
 
     return (
-        <div className="flex overflow-hidden select-none rounded-[18px]  flex-col items-center relative w-[20rem] h-[32rem]">
+        <div className="cursor-pointer flex border-2 border-[#2a2a2a] object-contain overflow-hidden select-none rounded-[20px]  flex-col items-center relative w-[20rem] h-[32rem]">
             {/* PROJECT THUMBNAIL */}
             <div
-                className=" transform w-full h-full"
+                className="rounded-[15px]  transform w-full h-full"
                 style={backgroundImage}
             ></div>
             {/* PROJECT DETAILS */}
